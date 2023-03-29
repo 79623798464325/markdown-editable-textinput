@@ -174,7 +174,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                 children:
                     [...widget.actions, ...widget.customActions].map((type) {
                   if (type is Widget) {
-                    return type;
+                    return Padding(padding: EdgeInsets.all(10), child: type);
                   } else {
                     switch (type) {
                       case MarkdownType.title:
