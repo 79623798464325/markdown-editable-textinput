@@ -30,9 +30,11 @@ class _MyAppState extends State<MyApp> {
       home: Theme(
         data: ThemeData(
           primaryColor: const Color(0xFF2C1C6B),
-          colorScheme: ColorScheme.light().copyWith(secondary: const Color(0xFF200681)),
+          colorScheme:
+              ColorScheme.light().copyWith(secondary: const Color(0xFF200681)),
           cardColor: const Color(0xFFF8F9FC),
-          textTheme: const TextTheme(bodyLarge: TextStyle(fontSize: 20, color: Color(0xFF2C1C6B))),
+          textTheme: const TextTheme(
+              bodyLarge: TextStyle(fontSize: 20, color: Color(0xFF2C1C6B))),
         ),
         child: Scaffold(
           appBar: AppBar(
@@ -42,6 +44,7 @@ class _MyAppState extends State<MyApp> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: ListView(
+                physics: BouncingScrollPhysics(),
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 100),
