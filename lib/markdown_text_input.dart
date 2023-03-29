@@ -127,8 +127,8 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
           BoxDecoration(
             color: Theme.of(context).cardColor,
             border: Border.all(
-                color: Theme.of(context).colorScheme.secondary, width: 2),
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                color: Theme.of(context).colorScheme.secondary, width: 1),
+            borderRadius: const BorderRadius.all(Radius.circular(5)),
           ),
       child: Column(
         children: <Widget>[
@@ -163,8 +163,8 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
             child: Material(
               color: Theme.of(context).cardColor,
               borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10)),
+                  bottomLeft: Radius.circular(5),
+                  bottomRight: Radius.circular(5)),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: widget.actions.map((type) {
