@@ -1,11 +1,6 @@
-import 'dart:io';
-import 'dart:ui';
-
 import 'package:expandable/expandable.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:markdown_editable_textinput/format_markdown.dart';
-import 'package:translator/translator.dart';
 
 /// Widget with markdown buttons
 class MarkdownTextInput extends StatefulWidget {
@@ -241,26 +236,9 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
                                   var color =
                                       Theme.of(context).colorScheme.secondary;
-                                  var language = kIsWeb
-                                      ? window.locale.languageCode
-                                      : Platform.localeName.substring(0, 2);
 
                                   var textLabel = 'Text';
                                   var linkLabel = 'Link';
-                                  try {
-                                    var textTranslation =
-                                        await GoogleTranslator()
-                                            .translate(textLabel, to: language);
-                                    textLabel = textTranslation.text;
-
-                                    var linkTranslation =
-                                        await GoogleTranslator()
-                                            .translate(linkLabel, to: language);
-                                    linkLabel = linkTranslation.text;
-                                  } catch (e) {
-                                    textLabel = 'Text';
-                                    linkLabel = 'Link';
-                                  }
 
                                   await showDialog<void>(
                                       context: context,
