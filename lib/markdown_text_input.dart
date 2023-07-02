@@ -130,9 +130,6 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
       decoration: widget.decoration ??
           BoxDecoration(
             color: Theme.of(context).cardColor,
-            border: Border.all(
-                color: Theme.of(context).colorScheme.secondary, width: 1),
-            borderRadius: const BorderRadius.all(Radius.circular(5)),
           ),
       child: Column(
         children: <Widget>[
