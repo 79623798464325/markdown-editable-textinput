@@ -164,7 +164,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children:
-                    [...widget.actions, ...widget.customActions].map((type) {
+                    [...widget.customActions, ...widget.actions].map((type) {
                   if (type is Widget) {
                     return Padding(padding: EdgeInsets.all(10), child: type);
                   } else {
