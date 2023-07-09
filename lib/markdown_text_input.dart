@@ -111,7 +111,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
   @override
   void initState() {
-    widget.focusNode ?? FocusNode();
+    focusNode = widget.focusNode ?? FocusNode();
     _controller.text = widget.initialValue;
     _controller.addListener(() {
       if (_controller.selection.baseOffset != -1)
