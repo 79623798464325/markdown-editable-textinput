@@ -41,6 +41,9 @@ class MarkdownTextInput extends StatefulWidget {
   /// Default value is true.
   final bool insertLinksByDialog;
 
+  // should the input autofocus
+  final bool autofocus;
+
   /// Constructor for [MarkdownTextInput]
   MarkdownTextInput(this.onTextChanged, this.initialValue,
       {this.label = '',
@@ -58,6 +61,7 @@ class MarkdownTextInput extends StatefulWidget {
       this.controller,
       this.insertLinksByDialog = true,
       this.decoration,
+      this.autofocus = false,
       this.customActions = const []});
 
   @override
@@ -149,7 +153,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                       color: Theme.of(context).colorScheme.secondary)),
               hintText: widget.label,
               hintStyle:
-                  const TextStyle(color: Color.fromRGBO(63, 61, 86, 0.5)),
+                  widget.textStyle ?? Theme.of(context).textTheme.bodyLarge,
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             ),
